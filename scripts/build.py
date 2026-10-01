@@ -65,6 +65,14 @@ def main():
     to_home = lambda s: re.sub(r'href="#([a-z]+)"', lambda m: 'href="/"' if m.group(1) == "top" else f'href="/#{m.group(1)}"', s)
     sub_header, sub_footer = to_home(header).replace('href="/insights/"', 'href="/insights/" aria-current="page"'), to_home(footer)
     sub_head = re.sub(r"<title>.*?</title>", "", head)
+    if not PREVIEW:  # production only: canonical + social share tags for the homepage
+        desc = re.search(r'<meta name="description" content="([^"]*)"', home).group(1)
+        title = re.search(r"<title>(.*?)</title>", home).group(1)
+        home_meta = (f'<link rel="canonical" href="{SITE_URL}/"><meta property="og:type" content="website">'
+                     f'<meta property="og:url" content="{SITE_URL}/"><meta property="og:title" content="{title}">'
+                     f'<meta property="og:description" content="{desc}"><meta property="og:image" content="{SITE_URL}/assets/hero-v1.jpg">'
+                     '<meta name="twitter:card" content="summary_large_image">')
+        home = home.replace("</head>", home_meta + "</head>", 1)
 
     teaser = ('<section class="sec home-ins"><div class="wrap"><p class="kicker center">Insights</p><h2 class="center">Thinking out loud.</h2>'
               '<p class="center sub2">Essays, research and field notes on AI, organizational knowledge, and modernizing without starting over.</p>'
