@@ -1,0 +1,34 @@
+/* ---- Refinements v2: header clearance, breathing room, type ---- */
+body{font-size:17px}
+.nav{background:var(--nav-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:16px 0}
+.nav.scrolled{padding:12px 0}
+.hero{min-height:max(680px,100svh)}
+.hero-in{padding-top:clamp(170px,22vh,230px);padding-bottom:clamp(80px,12vh,140px)}
+.hero h1{font-size:clamp(3rem,min(7vw,11vh),6rem);line-height:1.04;margin-bottom:1.9rem}
+.eyebrow{margin-bottom:2.4rem!important}
+.lede{line-height:1.7;margin-bottom:3rem;max-width:560px;font-size:1.22rem}
+.ctas{gap:16px}
+.sec{padding:clamp(110px,14vh,160px) 0}
+h2{margin-bottom:1.6rem;line-height:1.14}
+.kicker{margin-bottom:1.3rem}
+.sub2{margin-top:-.2rem;line-height:1.7}
+.grid-2{gap:clamp(56px,8vw,120px)}
+.prose p{font-size:1.1rem;line-height:1.85;margin-bottom:1.6rem}
+blockquote{margin-top:2.6rem;line-height:1.4}
+.cards-2{gap:40px;margin-top:4.2rem}.cards-3{gap:34px;margin-top:4.2rem}.cards-4{gap:44px}
+.card{padding:clamp(36px,4vw,56px)}
+.card p{line-height:1.75}
+.offer ul{margin-top:2rem;padding-top:1.4rem}.offer li{padding:.55rem 0 .55rem 1.6rem}
+.stats{padding:clamp(96px,12vh,130px) 0}.stats-in{gap:56px}.stat-l{line-height:1.6}
+.aud h3{margin-bottom:1.8rem}.aud-i{padding:1.4rem 0}.aud-i h4{margin-bottom:.45rem}
+.pr p{line-height:1.75}
+.pr-link{color:var(--accent);font-weight:600;text-decoration:none;white-space:nowrap}.pr-link:hover{text-decoration:underline}
+.steps{margin-top:4.4rem}.step{padding-right:52px;padding-top:40px}.step h3{margin-bottom:.7rem}
+.principles{padding-top:50px}.pp h4{margin-bottom:.6rem}.pp p{line-height:1.7}
+.cta{padding:clamp(120px,16vh,170px) 0}.cta p{margin-bottom:2.8rem}
+.ins-hero{padding:clamp(170px,22vh,220px) 0 64px}.ins-hero h1{margin-bottom:1.4rem;line-height:1.08}
+.ins-feature{margin-bottom:72px}.ins-grid{gap:36px}.ins-card .ins-body{padding:32px}
+.art-hero{padding:clamp(160px,20vh,210px) 0 48px}.art-hero h1{line-height:1.1;margin-bottom:1.5rem}.back{margin-bottom:2.4rem}
+.prose-art{line-height:1.85}.prose-art h2{margin:3.4rem 0 1.2rem}
+@media (max-width:960px){.hero-in{padding-top:150px}.sec{padding:90px 0}.step{padding-right:0}.cards-2,.cards-3,.ins-grid{gap:28px}}
+@media (max-width:700px){.prose-art table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:.88rem}.prose-art th,.prose-art td{padding:10px 8px;min-width:90px}}
