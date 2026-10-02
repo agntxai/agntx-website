@@ -11,3 +11,7 @@ html{background:var(--bg)}
 .maker span{font-weight:600;color:var(--body);font-size:.74rem}.maker img{margin-top:2px}
 .foot-in{row-gap:18px}.foot-co{flex-direction:row-reverse;gap:18px}.foot-co .fine{text-align:right}
 @media (max-width:960px){.foot-co{flex-direction:row}.foot-co .fine{text-align:left}}
+
+/* Gary feedback Oct 2: Agentic logo 2x (header 22->44px, footer 28->56px, mobile header 18->28px) */
+.maker{height:48px}.maker img{height:44px}.foot-co img{height:56px}
+@media (max-width:960px){.maker{height:32px}.maker img{height:28px}}
