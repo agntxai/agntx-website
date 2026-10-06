@@ -88,7 +88,7 @@ def main():
 <section class="wrap"><a class="ins-feature reveal" href="/insights/{feat['slug']}/"><div class="ins-img" style="background-image:url(/assets/insights/{feat['image']})"></div>
 <div class="ins-body"><p class="ins-meta"><span class="ins-type">Featured {e(feat['type'])}</span> · {fmt(feat['dt'])} · {e(feat['read'])}</p><h2>{e(feat['title'])}</h2><p>{e(feat['summary'])}</p><span class="ins-more">Read the {e(feat['type'].lower())} →</span></div></a>
 <div class="chips">{chips}</div><div class="ins-grid">{"".join(card(p, "/insights/" + p["slug"] + "/") for p in rest)}</div></section>
-<section class="cta"><div class="wrap cta-in"><h2>Get new insights by email.</h2><p>A short note when we publish something worth your time. No spam.</p><a class="btn btn-lg" href="mailto:gary.cooper@agntx.ai?subject=Subscribe%20to%20Lapis%20Insights">Subscribe →</a></div></section>
+<section class="cta"><div class="wrap cta-in"><h2>Get new insights by email.</h2><p>A short note when we publish something worth your time. No spam.</p><a class="btn btn-lg" href="mailto:hello@agntx.ai?subject=Subscribe%20to%20Lapis%20Insights">Subscribe →</a></div></section>
 </main>{sub_footer}{script}
 <script>document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');const f=c.dataset.f;document.querySelectorAll('.ins-grid .ins-card').forEach(k=>k.style.display=(f==='All'||k.dataset.type===f)?'':'none')}})</script></body></html>'''
     os.makedirs(os.path.join(DIST, "insights"))
@@ -105,7 +105,7 @@ def main():
 <h1>{e(p['title'])}</h1><p class="lede">{e(p['summary'])}</p><div class="byline"><span>By {e(p['author'])}</span>{dl}</div></div></header>
 <div class="wrap"><div class="art-img" style="background-image:url(/assets/insights/{p['image']})"></div></div>
 <div class="wrap art-narrow prose-art">{p['html']}</div></article>
-<section class="art-cta"><div class="wrap art-narrow"><h3>Want to see what this looks like in your organization?</h3><p>Bring a real problem. In 90 minutes we'll show you what Lapis does with it.</p><a class="btn" href="mailto:gary.cooper@agntx.ai?subject=Re%3A%20{subj}">Talk to us →</a></div></section>
+<section class="art-cta"><div class="wrap art-narrow"><h3>Want to see what this looks like in your organization?</h3><p>Bring a real problem. In 90 minutes we'll show you what Lapis does with it.</p><a class="btn" href="mailto:hello@agntx.ai?subject=Re%3A%20{subj}">Talk to us →</a></div></section>
 <section class="wrap related"><p class="kicker">Keep reading</p><div class="ins-grid">{"".join(card(q, "/insights/" + q["slug"] + "/") for q in related)}</div></section>
 </main>{sub_footer}{script}</body></html>'''
         os.makedirs(os.path.join(DIST, "insights", p["slug"]))
