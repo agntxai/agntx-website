@@ -18,3 +18,10 @@ html{background:var(--bg)}
 /* Oct 2: header shows the Agentic logo only (Lapis mark, BY label and divider removed) */
 .nav .maker{border-left:0;padding-left:0;margin-left:0;height:auto}.nav .maker img{height:44px;margin-top:0}
 @media (max-width:960px){.nav .maker img{height:36px}}
+
+/* Hero: extend the light scrim further across so the lede stays legible over the photo */
+.hero-bg:after{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.94) 50%,rgba(255,255,255,.82) 68%,rgba(255,255,255,.4) 84%,rgba(255,255,255,0) 100%)}
+@media (max-width:760px){.hero-bg:after{background:linear-gradient(90deg,rgba(255,255,255,.93) 0%,rgba(255,255,255,.9) 100%)}}
+/* Stats: keep each figure on one line ("1 engineer", "2 days"); scale down on phones so nothing overflows */
+.stat-n{white-space:nowrap}
+@media (max-width:600px){.stats-in{gap:36px 20px}.stats .stat{padding-left:16px}.stat-n{font-size:clamp(1.55rem,7.2vw,2.1rem)}}
