@@ -25,3 +25,6 @@ html{background:var(--bg)}
 /* Stats: keep each figure on one line ("1 engineer", "2 days"); scale down on phones so nothing overflows */
 .stat-n{white-space:nowrap}
 @media (max-width:600px){.stats-in{gap:36px 20px}.stats .stat{padding-left:16px}.stat-n{font-size:clamp(1.55rem,7.2vw,2.1rem)}}
+
+/* Mobile hero: lighter (80%), even wash so the photo reads as a photo; re-center on the glass wall and network graphics */
+@media (max-width:760px){.hero-bg{background-position:68% 50%}.hero-bg:after{background:rgba(255,255,255,.8)}}
